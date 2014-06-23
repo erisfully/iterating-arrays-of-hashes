@@ -31,11 +31,34 @@ class Dogs
   def small_dogs
     small_dog_array = []
     @dogs.each do |dog|
-     small_dog_array.push(dog) if  dog.has_value?(:small)
+     small_dog_array.push(dog) if dog.has_value?(:small)
     end
     small_dog_array
   end
-end
+
+  def huge_dog
+    huge_dog_array = []
+    @dogs.each do |dog|
+      huge_dog_array.push(dog) if dog.has_value?(:huge)
+    end
+    huge_dog_array[0]
+  end
+
+  def large_dog_names
+    large_dog_name_array = []
+    @dogs.each do |dog|
+      large_dog_name_array.push(dog) if dog.has_value?(:large)
+    end
+    name_array = []
+    large_dog_name_array.each do |name|
+    name_array.push(name[:name])
+    end
+    name_array
+  end
+
+  
+
+  end
 
 
 
