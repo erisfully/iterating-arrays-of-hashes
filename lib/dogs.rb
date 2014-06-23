@@ -28,6 +28,21 @@ class Dogs
     ]
   end
 
-  # only edit below this line
-
+  def small_dogs
+    small_dog_array = []
+    @dogs.each do |dog|
+     small_dog_array.push(dog) if  dog.has_value?(:small)
+    end
+    small_dog_array
+  end
 end
+
+
+
+
+
+
+
+
+
+
