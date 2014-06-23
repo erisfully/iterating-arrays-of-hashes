@@ -67,6 +67,36 @@ class Dogs
     joes_large_dogs_array
   end
 
+  def sizes
+    size_array = []
+    @dogs.each do |dog|
+    size_array.push(dog[:size])
+    size_array.uniq!
+    end
+    size_array
+  end
+
+def owners
+  first_array = []
+  @dogs.each do |dog|
+  first_array.push(dog[:owner][:name][:first])
+  first_array.uniq!
+
+  end
+  print first_array
+
+  last_array = []
+  @dogs.each do |dog|
+    last_array.push(dog[:owner][:name][:last])
+    last_array.uniq!
+
+  end
+  print last_array
+
+
+end
+
+
 end
 
 
