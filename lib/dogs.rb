@@ -56,9 +56,19 @@ class Dogs
     name_array
   end
 
-  
+  def joes_large_dogs
+    joes_large_dogs_array = []
 
+    @dogs.each do |dog|
+      if dog[:owner][:name][:first] =="Joe" && dog[:size] == :large
+      joes_large_dogs_array.push(dog[:name])
+      end
+    end
+    joes_large_dogs_array
   end
+
+end
+
 
 
 
